@@ -130,7 +130,3 @@ For deeper customization, create your own Kurtosis package in `packages/flashfee
 - [optimism-package](https://github.com/ethpandaops/optimism-package)
 - [OP Stack Documentation](https://docs.optimism.io/stack/getting-started)
 - [flashbots/rblib](https://github.com/flashbots/rblib)
-
-## License
-
-[Your License Here]
