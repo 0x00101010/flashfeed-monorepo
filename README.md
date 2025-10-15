@@ -31,10 +31,10 @@ flashfeed-monorepo/
 
 ### 1. Initialize the Repository
 
-Run the initialization script to set up the rblib fork and create all necessary files:
+Run the setup command to clone the rblib fork and create all necessary files:
 
 ```bash
-./init.sh
+make setup
 ```
 
 This will:
@@ -44,11 +44,10 @@ This will:
 
 ### 2. Deploy Ethereum L1 (Vanilla)
 
-Deploy a vanilla Ethereum L1 testnet using Kurtosis:
+Deploy a vanilla Ethereum L1 testnet:
 
 ```bash
-kurtosis run github.com/ethpandaops/ethereum-package \
-  --args-file infra/kurtosis/ethereum-l1/network_params.yaml
+make run-l1
 ```
 
 ### 3. Deploy Optimism L2
@@ -56,9 +55,25 @@ kurtosis run github.com/ethpandaops/ethereum-package \
 Deploy an OP Stack L2 rollup (automatically includes L1):
 
 ```bash
-kurtosis run github.com/ethpandaops/optimism-package \
-  --args-file infra/kurtosis/optimism-l2/network_params.yaml
+make run-l2
 ```
+
+### Available Make Commands
+
+Run `make help` to see all available commands:
+
+```bash
+make help
+```
+
+Common commands:
+- `make setup` - Initialize repository
+- `make run-l1` - Deploy L1 testnet
+- `make run-l2` - Deploy L2 rollup
+- `make stop` - Stop all enclaves
+- `make clean` - Clean up Docker resources
+- `make build-rblib` - Build rblib node
+- `make test-rblib` - Test rblib node
 
 ## Working with rblib
 

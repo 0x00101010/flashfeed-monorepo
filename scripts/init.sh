@@ -2,6 +2,10 @@
 
 set -e
 
+# Get the repo root directory (parent of scripts/)
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$REPO_ROOT"
+
 echo "🚀 Initializing FlashFeed Monorepo..."
 echo ""
 
