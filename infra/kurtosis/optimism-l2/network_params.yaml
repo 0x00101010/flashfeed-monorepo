@@ -1,0 +1,20 @@
+# Optimism L2 Network Configuration
+# https://github.com/ethpandaops/optimism-package
+
+participants:
+  - el_type: op-geth
+    cl_type: op-node
+    count: 1
+
+optimism_package:
+  chains:
+    - participants:
+        - el_type: op-geth
+          cl_type: op-node
+
+# This will automatically deploy an L1 using ethereum-package
+ethereum_package:
+  participants:
+    - el_type: geth
+      cl_type: lighthouse
+      count: 2

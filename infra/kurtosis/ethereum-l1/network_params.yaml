@@ -1,0 +1,14 @@
+# Ethereum L1 Network Configuration
+# https://github.com/ethpandaops/ethereum-package
+
+participants:
+  - el_type: geth
+    cl_type: lighthouse
+    count: 2
+  - el_type: nethermind
+    cl_type: teku
+    count: 1
+
+network_params:
+  preset: minimal
+  genesis_delay: 20

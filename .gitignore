@@ -7,6 +7,10 @@
 *.swo
 *~
 
+# Nested Git Repositories (managed independently)
+# rblib is a fork maintained as a separate git repo
+nodes/rblib/
+
 # IDEs and Editors
 .vscode/
 .idea/
